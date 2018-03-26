@@ -65,6 +65,40 @@ document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() =
         .forEach(tr => table.appendChild(tr) );
 })));
 
+function clean(e) {
+  var textfield = document.getElementById(e);
+  var regex = /[^a-z 0-9?!,.а-я]/gi;
+  //textfield.value = textfield.value.replace(regex, "");
+  if (textfield.value.search(regex) > -1) {
+    document.getElementById("status").innerHTML = "poop was found";
+    textfield.value = textfield.value.replace(regex, "");
+  } else {
+    document.getElementById("status").innerHTML = "";
+  }
+
+
+}
+
+function repetitionHighlight(str) {
+  var textfield = document.getElementById(str);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // IE11 Support (non-ES6) -- SORTER (below)
 
 // If you want to support IE11, you'll need to ditch the ES6 syntax and add polyfills for Array.from, Array.forEach and Element.closest.
