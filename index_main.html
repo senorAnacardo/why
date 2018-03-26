@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FWT</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <h2>Welcome to FWT!</h2>
+
+    Here you can play around with text.
+    <br>
+    <br>
+    Here is the list of currenctly available features:
+    <br>
+    <ul>
+      <li> Check the word frequency in your text. <br> The result will be shown below, populated in the table.</li>
+    </ul>
+    TBD features/WIP:
+    <ul>
+      <li>upload your document to see the results in the table</li>
+      <li>get the results in a separate html file</li>
+      <li>get the result in a fancy designed PDF</li>
+      <li>character count</li>
+      <li>check for a specific word</li>
+      <li>Velocity Text 0.2</li>
+      <li>log in/account + history</li>
+      <li>table - filters</li>
+      <li>flashcards ? </li>
+      <li>highlight repeated words in the text while typing</li>
+      <li>useful VBA/Excel macros for text processing</li>
+      <ul>
+        <li>row/column highlight</li>
+        <li>bold a specific word</li>
+        <li>highlight differences in two texts</li>
+      </ul>
+    </ul>
+
+    <textarea id="mainUserText" placeholder="Enter your text here..." autofocus>
+
+  </textarea>
+  <br>
+  <br>
+    <button id="submitButton" onclick="populateTableFromInput()"><b>Submit</b></button>
+
+    <!-- <button onclick="history.back(-1)">Back</button> -->
+    <button title="The page will refresh and the table will be cleared." id="refreshButton" onclick="refreshButton()"><b>New text</b></button>
+
+    <br>
+    <br><br>
+    <b>Click on the column header to sort the column.</b>
+    <br>
+    <br>
+    <table id = "mainTable">
+
+        <tr>
+
+            <th>Word</th>
+            <th>Frequency</th>
+
+        </tr>
+
+    </table>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+  </body>
+
+  <footer>
+    <script type="text/javascript" src="mainJS.js">
+    </script>
+  </footer>
+</html>
