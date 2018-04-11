@@ -10,7 +10,8 @@
     </style>
   </head>
   <body>
-
+<table>
+<td>
     <h2>Welcome to FWT!</h2>
 
     Here you can play around with text.
@@ -82,7 +83,50 @@
     </table>
     <p id="demo"></p>
     <p id="demo2"></p>
+  </td>
+  <td width = 50%>
+    <form>
+        И <input type="text" name="nominative" id="nominativeInput">
+        <br>
+        Р <input type="text" name="genetive" id="genetiveInput">
+        <br>
+        Д <input type="text" name="dative" id="dativeInput">
+        <br>
+        В <input type="text" name="accusative" id="accusativeInput">
+        <br>
+        Т <input type="text" name="instrumental" id="instrumentalInput">
+        <br>
+        П <input type="text" name="prepositional" id="prepositionalInput">
+    </form>
+    <button type="button" name="button">Accept</button>
 
+    <p id="casesDefault"></p>
+    <button type="button" name="button" onclick="test1()">TEST1</button>
+    <button type="button" name="button" onclick="showCases()">Show Cases</button>
+<br>
+<br>
+    <p id="outputNom">И:</p>  — прекрасный человек.
+    <br>
+    <br>
+    <p id="outputGen">И:</p> У Дарьи есть маленький котёнок.
+    <br>
+    <br>
+    <p id="outputDat">И:</p> Дарье его подарили, когда ей было 10 лет.
+    <br>
+    <br>
+    <p id="outputAcc">И:</p> Котёнок часто царапал Дарью.
+    <br>
+    <br>
+    <p id="outputInst">И:</p> Видимо, он был очень недоволен Дарьей.
+    <br>
+    <br>
+    <p id="outputPrep">И:</p> Мне ещё много чего рассказывали про Дарью.
+    <br>
+    <br>
+    <br>
+     У Дарьи есть маленький котёнок.
+   </td>
+</table>
   </body>
 
   <footer>

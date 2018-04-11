@@ -1,3 +1,29 @@
+var nom,gen,dat,acc,inst,prep;
+
+console.log(nom);
+function test1 () {
+  nom = document.getElementById('nominativeInput').value;
+  console.log(nom);
+}
+
+
+function showCases() {
+  nom = document.getElementById("nominativeInput").value;
+  gen = document.getElementById("genetiveInput").value;
+  dat = document.getElementById("dativeInput").value;
+  acc = document.getElementById("accusativeInput").value;
+  inst = document.getElementById("instrumentalInput").value;
+  prep = document.getElementById("prepositionalInput").value;
+
+  document.getElementById("outputNom").innerHTML = `${nom}`
+  document.getElementById("outputGen").innerHTML = `${gen}`
+  document.getElementById("outputDat").innerHTML = `${dat}`
+  document.getElementById("outputAcc").innerHTML = `${acc}`
+  document.getElementById("outputInst").innerHTML = `${inst}`
+  document.getElementById("outputPrep").innerHTML = `${prep}`
+
+}
+
 function cleanString(stringToClean) {
   var punctuationless = stringToClean.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g,"");
   var cleanedString = punctuationless.replace(/\s{2,}/g," ");
