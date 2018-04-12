@@ -85,6 +85,16 @@
     <p id="demo2"></p>
   </td>
   <td width = 50%>
+    Please enter your character's name:
+    <form>
+      <input type="text" name="defaultName" id="defaultUserName">
+    </form>
+    <form action="">
+      <form action="">
+        <input type="radio" name="ifInclined" id="radio1" onclick="propagateDefaultNames()"> Yes<br>
+        <input type="radio" name="ifInclined" id="radio2" onclick="noDeclination()"> No<br>
+      </form>
+    </form>
     <form>
         И <input type="text" name="nominative" id="nominativeInput">
         <br>
@@ -98,33 +108,22 @@
         <br>
         П <input type="text" name="prepositional" id="prepositionalInput">
     </form>
-    <button type="button" name="button">Accept</button>
+    <button type="button" name="button">Accept</button><br><br>
+    <textarea name="userText_var" id="userText_var"></textarea>
+    <br>
+    <button type="button" name="applyC" id="applyCases" onclick="applyCases()">Apply case(s)</button>
 
     <p id="casesDefault"></p>
-    <button type="button" name="button" onclick="test1()">TEST1</button>
+
     <button type="button" name="button" onclick="showCases()">Show Cases</button>
 <br>
 <br>
-    <p id="outputNom">И:</p>  — прекрасный человек.
-    <br>
-    <br>
-    <p id="outputGen">И:</p> У Дарьи есть маленький котёнок.
-    <br>
-    <br>
-    <p id="outputDat">И:</p> Дарье его подарили, когда ей было 10 лет.
-    <br>
-    <br>
-    <p id="outputAcc">И:</p> Котёнок часто царапал Дарью.
-    <br>
-    <br>
-    <p id="outputInst">И:</p> Видимо, он был очень недоволен Дарьей.
-    <br>
-    <br>
-    <p id="outputPrep">И:</p> Мне ещё много чего рассказывали про Дарью.
-    <br>
-    <br>
-    <br>
-     У Дарьи есть маленький котёнок.
+    <p id="outputNom">И</p>
+    <p id="outputGen">Р</p>
+    <p id="outputDat">Д</p>
+    <p id="outputAcc">В</p>
+    <p id="outputInst">Т</p>
+    <p id="outputPrep">П</p>
    </td>
 </table>
   </body>
