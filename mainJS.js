@@ -1,9 +1,6 @@
 var nom,gen,dat,acc,inst,prep,lol;
 
 
-
-
-
 function test1() {
   var userText_var_string = document.getElementById("userText_var").value;
   nom = document.getElementById("nominativeInput").value;
@@ -13,24 +10,26 @@ function test1() {
   inst = document.getElementById("instrumentalInput").value;
   prep = document.getElementById("prepositionalInput").value;
 
+
+
   switch (true) {
     case userText_var_string.includes("charNameN") === true:
       document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameN", nom);
       break;
     case userText_var_string.includes("charNameG") === true:
-      userText_var = userText_var.replace("charNameN", nom);
+      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameG", gen);
       break;
     case userText_var_string.includes("charNameD") === true:
-      userText_var = userText_var.replace("charNameN", nom);
+      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameD", dat);
       break;
     case userText_var_string.includes("charNameA") === true:
-      userText_var = userText_var.replace("charNameN", nom);
+      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameA", acc);
       break;
     case userText_var_string.includes("charNameI") === true:
-      userText_var = userText_var.replace("charNameN", nom);
+      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameI", inst);
       break;
     case userText_var_string.includes("charNameP") === true:
-      userText_var = userText_var.replace("charNameN", nom);
+      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameP", prep);
       break;
     // default:
     //
