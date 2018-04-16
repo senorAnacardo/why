@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <title>FWT</title>
     <link rel="stylesheet" href="styles.css">
@@ -10,124 +12,33 @@
     </style>
   </head>
   <body>
-<table>
-<td>
-    <h2>Welcome to FWT!</h2>
-
+    <div class="container">
+    <header>
+      <h2>Welcome to FWT!</h2>
+    </header>
     Here you can play around with text.
-    <br>
-    <br>
-    Here is the list of currenctly available features:
-    <br>
-    <ul>
-      <li> Check the word frequency in your text. <br> The result will be shown below, populated in the table.</li>
-    </ul>
-    TBD features/WIP:
-    <ul>
-      <li>upload your document to see the results in the table</li>
-      <li>get the results in a separate html file</li>
-      <li>get the result in a fancy designed PDF</li>
-      <li>character count</li>
-      <li>check for a specific word</li>
-      <li>Velocity Text 0.2</li>
-      <li>log in/account + history</li>
-      <li>table - filters</li>
-      <li>flashcards ? </li>
-      <li>highlight repeated words in the text while typing</li>
-      <li>useful VBA/Excel macros for text processing</li>
-      <li>inventory localization</li>
-      <li>grid inventory / item / buff or moodlet and localize it</li>
-      <li>symantic maps</li>
-      <li>logic trees</li>
-      <li>мультяшный/пиксельный персонаж в углу экрана с облачком текста, который переводится в зависимоси от выбранного языка</li>
-      <li>dictionaries{key:value}</li>
-      <li>?</li>
+    <nav>
       <ul>
-        <li>row/column highlight</li>
-        <li>bold a specific word</li>
-        <li>highlight differences in two texts</li>
+        <li><a href="wordCounter.html">Count words in text</a></li>
+        <li><a href="cases_RU.html">Cases - RU</a></li>
+        <li><a href="generic.html">Features list</a></li>
+        <li><a href="#">Tokyo</a></li>
       </ul>
-    </ul>
+    </nav>
 
     <textarea id = "ta" name="ta" onkeyup="clean('ta')" onkeydown="clean('ta')"> HA! </textarea>
     <br>
-    <div id="status"></div>
-
-    </div>
-    <br>
-
-    <textarea id="mainUserText" placeholder="Enter your text here..." autofocus>
-
-  </textarea>
-  <br>
-  <br>
-    <button id="submitButton" onclick="populateTableFromInput()"><b>Submit</b></button>
-
+    <!-- <div id="status"></div>
+    </div> -->
     <!-- <button onclick="history.back(-1)">Back</button> -->
-    <button title="The page will refresh and the table will be cleared." id="refreshButton" onclick="refreshButton()"><b>New text</b></button>
-
     <br>
-    <br><br>
-    <b>Click on the column header to sort the column.</b>
-    <br>
-    <br>
-    <table id = "mainTable">
 
-        <tr>
-
-            <th>Word</th>
-            <th>Frequency</th>
-
-        </tr>
-
-    </table>
-    <p id="demo"></p>
-    <p id="demo2"></p>
-  </td>
-  <td width = 50%>
-    Please enter your character's name:
-    <form>
-      <input type="text" name="defaultName" id="defaultUserName">
-    </form>
-    <form action="">
-      <form action="">
-        <input type="radio" name="ifInclined" id="radio1" onclick="propagateDefaultNames()"> Yes<br>
-        <input type="radio" name="ifInclined" id="radio2" onclick="noDeclination()"> No<br>
-      </form>
-    </form>
-    <form>
-        <input type="text" name="nominative" id="nominativeInput"> - 1 (Nominative) charNameN
-        <br>
-        <input type="text" name="genetive" id="genetiveInput"> - 2 (Genetive) charNameG
-        <br>
-        <input type="text" name="dative" id="dativeInput"> - 3 (Dative) charNameD
-        <br>
-        <input type="text" name="accusative" id="accusativeInput"> - 4 (Accusative) charNameA
-        <br>
-        <input type="text" name="instrumental" id="instrumentalInput"> - 5 (instrumental) charNameI
-        <br>
-        <input type="text" name="prepositional" id="prepositionalInput"> - 6 (prepositional) charNameP
-    </form>
-    <button type="button" name="button">Accept</button><br><br>
-
-    <!-- Big user input text with variables. -->
-    <textarea name="userText_var" id="userText_var"></textarea>
-    <br>
-    <button type="button" name="applyC" id="applyCases" onclick="applyCases()">Apply case(s)</button>
-
-    <p id="casesDefault"></p>
-<button type="button" name="button" id="test1" onclick = "test1()">Test 1</button>
-    <button type="button" name="button" onclick="showCases()">Show Cases</button>
 <br>
 <br>
-    <p id="outputNom"></p>
-    <p id="outputGen"></p>
-    <p id="outputDat"></p>
-    <p id="outputAcc"></p>
-    <p id="outputInst"></p>
-    <p id="outputPrep"></p>
-   </td>
-</table>
+   <!-- </td> -->
+<!-- </table> -->
+
+</div>
   </body>
 
   <footer>

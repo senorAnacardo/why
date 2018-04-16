@@ -1,40 +1,40 @@
 var nom,gen,dat,acc,inst,prep,lol;
 
-
-function test1() {
-  var userText_var_string = document.getElementById("userText_var").value;
-  nom = document.getElementById("nominativeInput").value;
-  gen = document.getElementById("genetiveInput").value;
-  dat = document.getElementById("dativeInput").value;
-  acc = document.getElementById("accusativeInput").value;
-  inst = document.getElementById("instrumentalInput").value;
-  prep = document.getElementById("prepositionalInput").value;
-
+function applyCases() {
+    var userText_var_string = document.getElementById("userText_var").value;
+    nom = document.getElementById("nominativeInput").value;
+    gen = document.getElementById("genetiveInput").value;
+    dat = document.getElementById("dativeInput").value;
+    acc = document.getElementById("accusativeInput").value;
+    inst = document.getElementById("instrumentalInput").value;
+    prep = document.getElementById("prepositionalInput").value;
 
 
-  switch (true) {
-    case userText_var_string.includes("charNameN") === true:
-      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameN", nom);
-      break;
-    case userText_var_string.includes("charNameG") === true:
-      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameG", gen);
-      break;
-    case userText_var_string.includes("charNameD") === true:
-      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameD", dat);
-      break;
-    case userText_var_string.includes("charNameA") === true:
-      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameA", acc);
-      break;
-    case userText_var_string.includes("charNameI") === true:
-      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameI", inst);
-      break;
-    case userText_var_string.includes("charNameP") === true:
-      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameP", prep);
-      break;
-    // default:
-    //
-  }
-
+    while (userText_var_string.includes("charName") === true) {
+      console.log("ATTEMPT");
+      switch (true) {
+        case userText_var_string.includes("charNameN") === true:
+          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameN", nom);
+          break;
+        case userText_var_string.includes("charNameG") === true:
+          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameG", gen);
+          break;
+        case userText_var_string.includes("charNameD") === true:
+          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameD", dat);
+          break;
+        case userText_var_string.includes("charNameA") === true:
+          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameA", acc);
+          break;
+        case userText_var_string.includes("charNameI") === true:
+          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameI", inst);
+          break;
+        case userText_var_string.includes("charNameP") === true:
+          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameP", prep);
+          break;
+        // default:
+        //
+      }
+    }
 }
   //nameVar|n
 
@@ -168,32 +168,12 @@ function clean(e) {
   } else {
     document.getElementById("status").innerHTML = "";
   }
-
-
 }
 
 function repetitionHighlight(str) {
   var textfield = document.getElementById(str);
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // IE11 Support (non-ES6) -- SORTER (below)
-
 // If you want to support IE11, you'll need to ditch the ES6 syntax and add polyfills for Array.from, Array.forEach and Element.closest.
 //
 // i.e.
@@ -212,5 +192,4 @@ function repetitionHighlight(str) {
 //             .forEach(function(tr) { table.appendChild(tr) });
 //     })
 // });
-
 //IE11 Support (non-ES6) -- SORTER (above) ^^^^^^^^

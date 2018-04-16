@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <header>
+      <h2>Mr Russian Caser</h2>
+    </header>
+    Please enter your character's name:
+    <form>
+      <input type="text" name="defaultName" id="defaultUserName">
+    </form>
+    <form action="">
+      <form action="">
+        <input type="radio" name="ifInclined" id="radio1" onclick="propagateDefaultNames()"> Yes<br>
+        <input type="radio" name="ifInclined" id="radio2" onclick="noDeclination()"> No<br>
+      </form>
+    </form>
+    <form>
+        <input type="text" name="nominative" id="nominativeInput"> - 1 (Nominative) charNameN
+        <br>
+        <input type="text" name="genetive" id="genetiveInput"> - 2 (Genetive) charNameG
+        <br>
+        <input type="text" name="dative" id="dativeInput"> - 3 (Dative) charNameD
+        <br>
+        <input type="text" name="accusative" id="accusativeInput"> - 4 (Accusative) charNameA
+        <br>
+        <input type="text" name="instrumental" id="instrumentalInput"> - 5 (instrumental) charNameI
+        <br>
+        <input type="text" name="prepositional" id="prepositionalInput"> - 6 (prepositional) charNameP
+    </form>
+    <br>
+    <br>
+    Please input your text here using the approriate variables stated above:
+    <br>
+    <!-- Big user input text with variables. -->
+    <textarea name="userText_var" id="userText_var"></textarea>
+    <br>
+    <button type="button" name="applyC" id="applyCases" onclick="applyCases()">Apply cases</button>
+  </body>
+  <footer>
+    <script type="text/javascript" src="mainJS.js">
+    </script>
+  </footer>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>FWT - WC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .clr1{ color: #F00; }
+    .clr1{ color: #000; }
+    </style>
+    <title>FWT - WC</title>
+  </head>
+
+  <body>
+    <header>
+      <h2>Mr Word Counter</h2>
+    </header>
+
+    <ul>
+		  <li> Check the word frequency in your text.
+		  <br> The result will be shown below, populated in the table.</li>
+		</ul>
+    <textarea id="mainUserText" placeholder="Enter your text here..." autofocus></textarea><br><br>
+    <button id="submitButton" onclick="populateTableFromInput()"><b>Submit</b></button>
+    <button title="The page will refresh and the table will be cleared." id="refreshButton" onclick="refreshButton()"><b>New text</b></button><br><br>
+    <b>Click on the column header to sort the column.</b> <br><br>
+    <table id = "mainTable">
+        <tr>
+            <th>Word</th>
+            <th>Frequency</th>
+        </tr>
+    </table>
+
+	</body>
+
+  <footer>
+    <script type="text/javascript" src="mainJS.js">
+    </script>
+  </footer>
+
+</html>
