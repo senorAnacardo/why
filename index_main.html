@@ -96,34 +96,36 @@
       </form>
     </form>
     <form>
-        И <input type="text" name="nominative" id="nominativeInput">
+        <input type="text" name="nominative" id="nominativeInput"> - 1 (Nominative) charNameN
         <br>
-        Р <input type="text" name="genetive" id="genetiveInput">
+        <input type="text" name="genetive" id="genetiveInput"> - 2 (Genetive) charNameG
         <br>
-        Д <input type="text" name="dative" id="dativeInput">
+        <input type="text" name="dative" id="dativeInput"> - 3 (Dative) charNameD
         <br>
-        В <input type="text" name="accusative" id="accusativeInput">
+        <input type="text" name="accusative" id="accusativeInput"> - 4 (Accusative) charNameA
         <br>
-        Т <input type="text" name="instrumental" id="instrumentalInput">
+        <input type="text" name="instrumental" id="instrumentalInput"> - 5 (instrumental) charNameI
         <br>
-        П <input type="text" name="prepositional" id="prepositionalInput">
+        <input type="text" name="prepositional" id="prepositionalInput"> - 6 (prepositional) charNameP
     </form>
     <button type="button" name="button">Accept</button><br><br>
+
+    <!-- Big user input text with variables. -->
     <textarea name="userText_var" id="userText_var"></textarea>
     <br>
     <button type="button" name="applyC" id="applyCases" onclick="applyCases()">Apply case(s)</button>
 
     <p id="casesDefault"></p>
-
+<button type="button" name="button" id="test1" onclick = "test1()">Test 1</button>
     <button type="button" name="button" onclick="showCases()">Show Cases</button>
 <br>
 <br>
-    <p id="outputNom">И</p>
-    <p id="outputGen">Р</p>
-    <p id="outputDat">Д</p>
-    <p id="outputAcc">В</p>
-    <p id="outputInst">Т</p>
-    <p id="outputPrep">П</p>
+    <p id="outputNom"></p>
+    <p id="outputGen"></p>
+    <p id="outputDat"></p>
+    <p id="outputAcc"></p>
+    <p id="outputInst"></p>
+    <p id="outputPrep"></p>
    </td>
 </table>
   </body>

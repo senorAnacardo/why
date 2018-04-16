@@ -1,23 +1,44 @@
 var nom,gen,dat,acc,inst,prep,lol;
 
-function applyCases() {
-  var textAreaValue = "";
-  textAreaValue = document.getElementById("userText_var").value;
 
-  console.log(textAreaValue.includes("nameVar|1"));
- switch (textAreaValue) {
-      case textAreaValue.includes("nameVar|1"):
-        textAreaValue = textAreaValue.replace("nameVar|1", document.getElementById("nominativeInput").value);
+
+
+
+function test1() {
+  var userText_var_string = document.getElementById("userText_var").value;
+  nom = document.getElementById("nominativeInput").value;
+  gen = document.getElementById("genetiveInput").value;
+  dat = document.getElementById("dativeInput").value;
+  acc = document.getElementById("accusativeInput").value;
+  inst = document.getElementById("instrumentalInput").value;
+  prep = document.getElementById("prepositionalInput").value;
+
+  switch (true) {
+    case userText_var_string.includes("charNameN") === true:
+      document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameN", nom);
       break;
-    default:
-      console.log("hm");
-      console.log(textAreaValue);
+    case userText_var_string.includes("charNameG") === true:
+      userText_var = userText_var.replace("charNameN", nom);
+      break;
+    case userText_var_string.includes("charNameD") === true:
+      userText_var = userText_var.replace("charNameN", nom);
+      break;
+    case userText_var_string.includes("charNameA") === true:
+      userText_var = userText_var.replace("charNameN", nom);
+      break;
+    case userText_var_string.includes("charNameI") === true:
+      userText_var = userText_var.replace("charNameN", nom);
+      break;
+    case userText_var_string.includes("charNameP") === true:
+      userText_var = userText_var.replace("charNameN", nom);
+      break;
+    // default:
+    //
   }
-  var res = textAreaValue.replace("nameVar", "W3Schools");
-  //console.log(res);
 
-  //nameVar|n
 }
+  //nameVar|n
+
 
 function propagateDefaultNames() {
   document.getElementById("nominativeInput").disabled = false;
@@ -51,15 +72,16 @@ function noDeclination() {
   document.getElementById("accusativeInput").disabled = true;
   document.getElementById("instrumentalInput").disabled = true;
   document.getElementById("prepositionalInput").disabled = true;
+
 }
 
 function showCases() {
-  nom = document.getElementById("nominativeInput").value;
-  gen = document.getElementById("genetiveInput").value;
-  dat = document.getElementById("dativeInput").value;
-  acc = document.getElementById("accusativeInput").value;
-  inst = document.getElementById("instrumentalInput").value;
-  prep = document.getElementById("prepositionalInput").value;
+  // nom = document.getElementById("nominativeInput").value;
+  // gen = document.getElementById("genetiveInput").value;
+  // dat = document.getElementById("dativeInput").value;
+  // acc = document.getElementById("accusativeInput").value;
+  // inst = document.getElementById("instrumentalInput").value;
+  // prep = document.getElementById("prepositionalInput").value;
 
   document.getElementById("outputNom").innerHTML = `${nom}  — прекрасный человек.`
   document.getElementById("outputGen").innerHTML = `У ${gen} есть маленький котёнок.`
