@@ -1,19 +1,26 @@
 var nom,gen,dat,acc,inst,prep,lol;
 
 function applyCases() {
-    var userText_var_string = document.getElementById("userText_var").value;
-    nom = document.getElementById("nominativeInput").value;
-    gen = document.getElementById("genetiveInput").value;
-    dat = document.getElementById("dativeInput").value;
-    acc = document.getElementById("accusativeInput").value;
-    inst = document.getElementById("instrumentalInput").value;
-    prep = document.getElementById("prepositionalInput").value;
+    // var userText_var_string = document.getElementById("userText_var").value;
+    // nom = document.getElementById("nominativeInput").value;
+    // gen = document.getElementById("genetiveInput").value;
+    // dat = document.getElementById("dativeInput").value;
+    // acc = document.getElementById("accusativeInput").value;
+    // inst = document.getElementById("instrumentalInput").value;
+    // prep = document.getElementById("prepositionalInput").value;
 
+    var userText_var_string = "";
 
+    do {
 
-    while (userText_var_string.includes("charName")) {
+      userText_var_string = document.getElementById("userText_var").value;
+      nom = document.getElementById("nominativeInput").value;
+      gen = document.getElementById("genetiveInput").value;
+      dat = document.getElementById("dativeInput").value;
+      acc = document.getElementById("accusativeInput").value;
+      inst = document.getElementById("instrumentalInput").value;
+      prep = document.getElementById("prepositionalInput").value;
 
-    }
       console.log("ATTEMPT");
       switch (true) {
         case userText_var_string.includes("charNameN") === true:
@@ -21,23 +28,29 @@ function applyCases() {
           document.getElementById("userText_var").value = userText_var_string;
           break;
         case userText_var_string.includes("charNameG") === true:
-          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameG", gen);
+          userText_var_string = userText_var_string.replace("charNameG", gen);
+          document.getElementById("userText_var").value = userText_var_string;
           break;
         case userText_var_string.includes("charNameD") === true:
-          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameD", dat);
+          userText_var_string = userText_var_string.replace("charNameD", dat);
+          document.getElementById("userText_var").value = userText_var_string;
           break;
         case userText_var_string.includes("charNameA") === true:
-          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameA", acc);
+          userText_var_string = userText_var_string.replace("charNameA", acc);
+          document.getElementById("userText_var").value = userText_var_string;
           break;
         case userText_var_string.includes("charNameI") === true:
-          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameI", inst);
+          userText_var_string = userText_var_string.replace("charNameI", inst);
+          document.getElementById("userText_var").value = userText_var_string;
           break;
         case userText_var_string.includes("charNameP") === true:
-          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameP", prep);
+          userText_var_string = userText_var_string.replace("charNameI", prep);
+          document.getElementById("userText_var").value = userText_var_string;
           break;
         // default:
         //
       }
+    } while (userText_var_string.includes("charName"));
 
 }
 
@@ -101,7 +114,7 @@ function cleanString(stringToClean) {
 
 //------------------------------------------------------------------------------
 
-document.getElementById("mainUserText").value = "";
+// document.getElementById("mainUserText").value = "";
 
 function refreshButton() {
     location.reload();
