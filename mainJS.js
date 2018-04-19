@@ -10,11 +10,15 @@ function applyCases() {
     prep = document.getElementById("prepositionalInput").value;
 
 
-    while (userText_var_string.includes("charName") === true) {
+
+    while (userText_var_string.includes("charName")) {
+
+    }
       console.log("ATTEMPT");
       switch (true) {
         case userText_var_string.includes("charNameN") === true:
-          document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameN", nom);
+          userText_var_string = userText_var_string.replace("charNameN", nom);
+          document.getElementById("userText_var").value = userText_var_string;
           break;
         case userText_var_string.includes("charNameG") === true:
           document.getElementById("userText_var").value = document.getElementById("userText_var").value.replace("charNameG", gen);
@@ -34,10 +38,8 @@ function applyCases() {
         // default:
         //
       }
-    }
-}
-  //nameVar|n
 
+}
 
 function propagateDefaultNames() {
   document.getElementById("nominativeInput").disabled = false;
@@ -74,7 +76,7 @@ function noDeclination() {
 
 }
 
-function showCases() {
+// function showCases() {
   // nom = document.getElementById("nominativeInput").value;
   // gen = document.getElementById("genetiveInput").value;
   // dat = document.getElementById("dativeInput").value;
@@ -82,14 +84,14 @@ function showCases() {
   // inst = document.getElementById("instrumentalInput").value;
   // prep = document.getElementById("prepositionalInput").value;
 
-  document.getElementById("outputNom").innerHTML = `${nom}  — прекрасный человек.`
-  document.getElementById("outputGen").innerHTML = `У ${gen} есть маленький котёнок.`
-  document.getElementById("outputDat").innerHTML = `${dat} его подарили, когда ей было 10 лет.`
-  document.getElementById("outputAcc").innerHTML = `Котёнок часто царапал ${acc}.`
-  document.getElementById("outputInst").innerHTML = `Видимо, он был очень недоволен ${inst}.`
-  document.getElementById("outputPrep").innerHTML = `Мне ещё много чего рассказывали про ${prep}.`
+  // document.getElementById("outputNom").innerHTML = `${nom}  — прекрасный человек.`
+  // document.getElementById("outputGen").innerHTML = `У ${gen} есть маленький котёнок.`
+  // document.getElementById("outputDat").innerHTML = `${dat} его подарили, когда ей было 10 лет.`
+  // document.getElementById("outputAcc").innerHTML = `Котёнок часто царапал ${acc}.`
+  // document.getElementById("outputInst").innerHTML = `Видимо, он был очень недоволен ${inst}.`
+  // document.getElementById("outputPrep").innerHTML = `Мне ещё много чего рассказывали про ${prep}.`
 
-}
+// }
 
 function cleanString(stringToClean) {
   var punctuationless = stringToClean.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()@\+\?><\[\]\+]/g,"");
